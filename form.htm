@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<script>
+    function validation()
+    {
+    name=document.getElementById('name').value;
+    if(name=="")
+        alert("Name cannot be left blank");
+    else if(name.length<2)
+        alert("Name cannot be less than 3 chars");    
+    
+    number=document.getElementById('mobile').value;
+    if(number.length<10 || number.length>10)
+        alert("Please enter a valid mobile number");
+    password-=document.getElementById('password').value;
+        if(password=="")
+            {
+                alert("Password cannot be empty");
+            }
+        else if(password.length<8)
+            {
+                alert("Password should have minimum 8 characters");
+            }
+    email=document.getElementById('mail').value;
+        if(email.indexOf("@",0)<0)
+            {
+                alert("Please enter a valid e-mail address");
+            }
+        else if(email.indexOf(".",0)<0)
+            {
+                alert("Please enter a valid e-mail address");
+            }
+
+    }
+        function myFunction() {
+  var x = document.getElementById("password");
+  if (x.type === "password") {
+    x.type = "text";
+  } else {
+    x.type = "password";
+  }
+}
+    function focusFunction(){
+        alert("Enter both alphabets and numbers");
+    }
+    </script> 
+      <div ng-app="">
+    <body>
+                <h1>Personal Details</h1>
+  <form name="myform" method="post" action="#" onsubmit="return validation()">
+    User Name: <input type="text" name="firstname" id="name required" ><br>
+    Password: <input type="password" name="pwd" id="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"  placeholder="Enter 8 or more characters" required><br>
+    <input type="checkbox" onclick="myFunction()">Show Password<br>  
+    E-Mail: <input type="email" name="email" id="mail" required><br>
+    DOB: <input type="date" name="dob" id="dob" ><br>
+    Mobile: <input type="number" name="mobile" id="mobile" ><br>
+    <input type="submit">
+    <input type="reset">
+    </form>
+        </body>
+          <style>
+              
+h1{
+    text-align: center;
+    color: red;
+    font-size: 40px;
+    }              
+input[type=text],[type=email],[type=date],[type=number]{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+input[type=password]{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+              }
+input[type=submit] {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+input[type=reset] {
+    width: 100%;
+    background-color: #073BED;
+    color: white;
+    padding: 10px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+input[type=submit]:hover {
+    background-color: #ED1C07;
+}
+input[type=reset]:hover {
+    background-color: #ED1C07;
+}
+div {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+</style>
+    </div>
+</html>
+ 
